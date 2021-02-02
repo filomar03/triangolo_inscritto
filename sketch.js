@@ -13,7 +13,6 @@ function Click() {
     btn.innerHTML = "light theme";
     darkTheme = false;
   }
-  console.log(darkTheme);
 }
 
 function setup() {
