@@ -1,7 +1,19 @@
+let btn = document.querySelector("button");
 let halfX;
 let halfY;
 let points = 50;
 let scale;
+let darkTheme = false;
+
+function Click() {
+  if (!darkTheme) {
+    btn.innerHTML("dark theme");
+    darkTheme = true;
+  } else {
+    btn.innerHTML("light theme");
+    darkTheme = false;
+  }
+}
 
 function setup() {
   createCanvas(750, 750);
@@ -12,8 +24,13 @@ function setup() {
 }
 
 function draw() {
-  background(0);
-  stroke(255);
+  if (!darkTheme) {
+    background(255);
+    stroke(0);
+  } else {
+    background(0);
+    stroke(255);
+  }
   strokeWeight(3);
   
   push();
