@@ -7,12 +7,13 @@ let darkTheme = false;
 
 function Click() {
   if (!darkTheme) {
-    btn.innerHTML("dark theme");
+    btn.innerHTML = "dark theme";
     darkTheme = true;
   } else {
-    btn.innerHTML("light theme");
+    btn.innerHTML = "light theme";
     darkTheme = false;
   }
+  console.log(darkTheme);
 }
 
 function setup() {
